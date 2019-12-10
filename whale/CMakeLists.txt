@@ -187,8 +187,8 @@ endif ()
 add_subdirectory(src/assembler/vixl)
 include_directories(src)
 
-add_definitions("-DWHALE_LIBRARY_NAME=\"lib${LIBRARY_NAME}.so\"")
-add_library(${LIBRARY_NAME} SHARED ${WHALE_SOURCES})
+#add_definitions("-DWHALE_LIBRARY_NAME=\"lib${LIBRARY_NAME}.so\"")
+add_library(${LIBRARY_NAME} STATIC ${WHALE_SOURCES})
 
 target_include_directories(${LIBRARY_NAME} PUBLIC include)
 
